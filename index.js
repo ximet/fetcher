@@ -116,5 +116,5 @@ const streamFetch = (options, onStream) => {
 };
 
 module.exports = {
-    fetcher, streamFetcher, streamFetch
+    fetcher, streamFetch
 };
