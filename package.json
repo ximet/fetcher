@@ -1,0 +1,33 @@
+{
+  "name": "simple-fetcher",
+  "version": "1.0.0",
+  "description": "Fetch data for server or browser",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha ./tests/index.js"
+  },
+  "repository": "ximet/simple-fetcher",
+  "author": {
+    "name": "Dmitry Bardt",
+    "email": "dq.ximet@gmail.com",
+    "url": "https://github.com/ximet"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "fetcher",
+    "request",
+    "response",
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "jsdom": "^11.0.0",
+    "mocha": "^3.2.0"
+  }
+}
