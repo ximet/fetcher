@@ -25,9 +25,14 @@ const fetcher = (options) => {
         XHR.onabort = reject;
         XHR.ontimeout = reject;
 
-        customOptions.method === 'GET' ? XHR.send() : XHR.send(new FormData(customOptions.form));
+        method(XHR, customOptions);
     });
 };
+
+//FIXME only get and post. Need update
+const responseMethod = (XHR, options) => {
+  options.method === 'GET' ? XHR.send() : XHR.send(new FormData(options.form));
+}
 
 const getContentType = (options, xhr) => {
     const boundary = String(Math.random()).slice(2);
