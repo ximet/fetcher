@@ -27,7 +27,7 @@ const setContentType = (options, xhr) => {
 const getContentType = (body) => {
 	if (typeof body === 'string') {
 		return DEFAULT_CONTENT_TYPE.text;
-	} else if (isURLSearchParams(body)) {
+	} else if (isURLEncoded(body)) {
 		return DEFAULT_CONTENT_TYPE.urlencoded;
 	} else if (typeof body.getBoundary === 'function') {
 		return `multipart/form-data;boundary=${body.getBoundary()}`;
