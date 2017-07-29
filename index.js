@@ -1,3 +1,4 @@
+const { getContentType } = require('./src/helpers/contentType.js');
 const REQUEST_AND_CONNECT_TIMEOUT = 30000;
 
 const fetcher = (options) => {
@@ -33,22 +34,6 @@ const fetcher = (options) => {
 const responseMethod = (XHR, options) => {
   options.method === 'GET' ? XHR.send() : XHR.send(new FormData(options.form));
 }
-
-const getContentType = (options, xhr) => {
-    const boundary = String(Math.random()).slice(2);
-
-    if(options.method === 'GET') {
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    }
-    else if(options.json) {
-        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    }
-    else {
-        xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
-    }
-
-    return xhr;
-};
 
 const parseOptions = (options) => {
     let currentOptions = {};
