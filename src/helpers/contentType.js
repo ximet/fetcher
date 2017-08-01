@@ -1,5 +1,5 @@
 const DEFAULT_CONTENT_TYPE = {
-  text: 'text/plain;charset=UTF-8'
+  text: 'text/plain;charset=UTF-8',
   html: 'text/html',
   json: 'application/json; charset=utf-8',
   xml: 'application/xml',
@@ -38,5 +38,6 @@ const getContentType = (body) => {
 
 module.exports = {
   getContentType,
-  setContentType
+  setContentType,
+  DEFAULT_CONTENT_TYPE
 }
