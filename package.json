@@ -4,7 +4,7 @@
   "description": "Fetch data for server or browser",
   "license": "MIT",
   "scripts": {
-    "test": "mocha ./tests/index.js"
+    "test": "mocha --compilers js:babel-core/register --recursive"
   },
   "repository": "ximet/simple-fetcher",
   "author": {
@@ -26,7 +26,8 @@
     "client"
   ],
   "devDependencies": {
-    "chai": "^3.5.0",
+    "expect": "^1.20.2",
+    "babel-core": "^6.17.0",
     "mocha": "^3.2.0"
   }
 }
