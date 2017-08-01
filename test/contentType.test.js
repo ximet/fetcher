@@ -3,7 +3,7 @@ const {getContentType, DEFAULT_CONTENT_TYPE} = require('../src/helpers/contentTy
 
 describe('List Test', () => {
     describe('getContentType', () => {
-        it('test function createElementFromVDOM with string param', () => {
+        it('test function getContentType with string param', () => {
             const body = 'testNode';
 
             expect(getContentType(body)).toEqual(DEFAULT_CONTENT_TYPE.text);
