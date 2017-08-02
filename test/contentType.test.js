@@ -7,6 +7,17 @@ describe('List Test', () => {
             const body = 'testNode';
 
             expect(getContentType(body)).toEqual(DEFAULT_CONTENT_TYPE.text);
+
+        });
+
+        it('test function getContentType with json param', () => {
+            const body = {
+                options: {
+                    json: JSON.parse('{"p": 5}')
+                }
+            }
+            expect(getContentType(body)).toEqual(null);
+
         });
     });
 });

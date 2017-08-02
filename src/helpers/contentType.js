@@ -36,6 +36,10 @@ const getContentType = (body) => {
 	}
 }
 
+const isURLEncoded = (body) => {
+    return false; //mock
+}
+
 module.exports = {
   getContentType,
   setContentType,
